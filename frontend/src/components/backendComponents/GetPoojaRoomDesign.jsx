@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Navbar from '../designComponents/Navbar';
+import Footer from '../designComponents/Footer';
 
 const GetPoojaRoomDesign = () => {
     const { data: response = {}, isLoading, refetch, isRefetching } = useQuery({
@@ -24,6 +25,8 @@ const GetPoojaRoomDesign = () => {
     const posts = response.data || []; // Extract the `data` array
 
     return (
+        <>
+       
         <div className="container mx-auto p-6 m-0">
             <Navbar/>
         <h1 className="text-3xl font-bold mb-6 text-left mt-10">Pooja Room Design</h1>
@@ -53,6 +56,10 @@ const GetPoojaRoomDesign = () => {
             </div>
         )}
     </div>
+    <div>
+        <Footer/>
+    </div>
+    </>
     );
 };
 

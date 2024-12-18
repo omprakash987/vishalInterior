@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Navbar from '../designComponents/Navbar';
+import Footer from '../designComponents/Footer';
 
 const GetModularKitchenDesign = () => {
     const { data: response = {}, isLoading, refetch, isRefetching } = useQuery({
@@ -24,9 +25,11 @@ const GetModularKitchenDesign = () => {
     const posts = response.data || []; // Extract the `data` array
 
     return (
+        <>
+       
         <div className="container mx-auto p-6">
             <Navbar/>
-            <h1 className="text-3xl font-bold mb-6 text-left mt-10">BModular Kitchen Designs</h1>
+            <h1 className="text-3xl font-bold mb-6 text-left mt-10">Modular Kitchen Designs</h1>
             {isLoading || isRefetching ? (
                 <div className="flex justify-center items-center h-32">
                     <p className="text-lg font-semibold">LOADING....</p>
@@ -52,7 +55,13 @@ const GetModularKitchenDesign = () => {
                     ))}
                 </div>
             )}
+           
         </div>
+        <div>
+            <Footer/>
+        </div>
+
+        </>
     );
 };
 

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Navbar from '../designComponents/Navbar';
+import Footer from '../designComponents/Footer';
 
 const GetBedRoomDesign = () => {
     const { data: response = {}, isLoading, refetch, isRefetching } = useQuery({
@@ -24,7 +25,7 @@ const GetBedRoomDesign = () => {
     const posts = response.data || []; // Extract the `data` array
 
     return (
-       <div className=' m-0'>
+       <div>
 <Navbar/>
       
 
@@ -56,6 +57,9 @@ const GetBedRoomDesign = () => {
                     ))}
                 </div>
             )}
+        </div>
+        <div>
+        <Footer/>
         </div>
         </div>
     );
