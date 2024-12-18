@@ -36,8 +36,8 @@ const Navbar = () => {
             </div>
             <div className="ml-2">
               <h1 className="text-lg font-semibold">
-                <span className="text-[#008489]">DESIGN</span>
-                <span className="text-[#C0A080]">CAFE</span>
+                <span className="text-[#008489]">VISHAL</span>
+                <span className="text-[#C0A080]">INTERIOR</span>
               </h1>
               <p className="text-xs text-gray-500 leading-tight">
                 MORE ROOM FOR JOY

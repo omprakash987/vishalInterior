@@ -18,7 +18,7 @@ const Footer = () => {
           {/* Example Links - Replace with your actual links */}
           {[
             "Home", "Design Gallery", "Space Saving Designs", "How It Works",
-            "Modular Kitchen Designs", "Wardrobe Designs", "Why DesignCafe", "Recent Projects",
+            "Modular Kitchen Designs", "Wardrobe Designs", "Why Vishal Interior", "Recent Projects",
             "Custom Modular Kitchens", "Kids Bedroom Designs", "FAQs", "Experience Centres",
             "Bedroom Designs", "Bathroom Designs", "Careers", "Customer Reviews",
             "Living Room Designs", "Blogs", "Refer & Earn", "DC Signature",
