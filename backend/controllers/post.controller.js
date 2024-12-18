@@ -1,7 +1,8 @@
 import kitchen from '../models/kitchen.model.js'
 import LivingRoom from '../models/livingRoom.model.js';
 import bedRoom from '../models/bedRoom.model.js';
-import poojaRoom from '../models/poojaRoom.model.js';
+import PoojaRoom from '../models/poojaRoom.model.js';
+import Bedroom from '../models/bedRoom.model.js';
 
 export const createModularKitchen = async(req , res )=>{
    try {
@@ -52,11 +53,17 @@ export const createLivingRoom = async(req , res )=>{
      const {text} = req.body; 
      const {img} = req.body;
  
-     if(!text || !img){
+     if(!text && !img){
          return res.status(400).json({error:"Please fill all the fields"})
      }
+
+     if (img) {
+        const uploadedResponse = await cloudinary.uploader.upload(img);
+        img = uploadedResponse.secure_url;
+        console.log("image : ", img);
+    }
  
-     const post = new LivingRoom({
+     const post = await LivingRoom.create({
          text,
          img
      })
@@ -90,11 +97,17 @@ export const createBedRoom = async(req , res )=>{
          const {text} = req.body; 
          const {img} = req.body;
      
-         if(!text || !img){
+         if(!text && !img){
              return res.status(400).json({error:"Please fill all the fields"})
          }
+
+         if (img) {
+            const uploadedResponse = await cloudinary.uploader.upload(img);
+            img = uploadedResponse.secure_url;
+            console.log("image : ", img);
+        }
      
-         const post = new bedRoom({
+         const post = await Bedroom.create({
              text,
              img
          })
@@ -128,14 +141,21 @@ export const createpoojaRoom = async(req , res )=>{
              const {text} = req.body; 
              const {img} = req.body;
          
-             if(!text || !img){
+             if(!text && !img){
                  return res.status(400).json({error:"Please fill all the fields"})
              }
+
+             if (img) {
+                const uploadedResponse = await cloudinary.uploader.upload(img);
+                img = uploadedResponse.secure_url;
+                console.log("image : ", img);
+            }
          
-             const post = new poojaRoom({
+             const post = await PoojaRoom.create({
                  text,
                  img
              })
+             console.log("pooja Room past : ", post); 
              res.status(200).json({
                  message:"Post created successfully",
                  data:post
@@ -151,7 +171,7 @@ export const createpoojaRoom = async(req , res )=>{
 
 export const getpoojaRoom = async(req , res )=>{
                 try {
-                    const posts = await poojaRoom.find();
+                    const posts = await PoojaRoom.find();
                     res.status(200).json({
                         message:"Posts fetched successfully",
                         data:posts

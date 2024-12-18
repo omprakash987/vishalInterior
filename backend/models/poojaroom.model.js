@@ -11,5 +11,5 @@ const poojaRoomSchema = new mongoose.Schema({
     }
 },{timestamps:true}); 
 
-const PoojaRoom = mongoose.model('Kitchen',poojaRoomSchema);
+const PoojaRoom = mongoose.model('PoojaRoom',poojaRoomSchema);
 export default PoojaRoom;
