@@ -1,8 +1,7 @@
 import kitchen from '../models/kitchen.model.js'
 import LivingRoom from '../models/livingroom.model.js';
-import bedRoom from '../models/bedRoom.model.js';
-import PoojaRoom from '../models/poojaRoom.model.js';
-import Bedroom from '../models/bedRoom.model.js';
+import PoojaRoom from '../models/poojaroom.model.js';
+import Bedroom from '../models/bedroom.model.js';
 import {v2 as cloudinary} from 'cloudinary';
 
 export const createModularKitchen = async(req , res )=>{
@@ -126,7 +125,7 @@ export const createBedRoom = async(req , res )=>{
 
 export const getBedRoom = async(req , res )=>{
             try {
-                const posts = await bedRoom.find();
+                const posts = await Bedroom.find();
                 res.status(200).json({
                     message:"Posts fetched successfully",
                     data:posts
