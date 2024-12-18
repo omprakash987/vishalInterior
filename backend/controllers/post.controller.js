@@ -1,5 +1,5 @@
 import kitchen from '../models/kitchen.model.js'
-import LivingRoom from '../models/livingRoom.model.js';
+import LivingRoom from '../models/livingroom.model.js';
 import bedRoom from '../models/bedRoom.model.js';
 import PoojaRoom from '../models/poojaRoom.model.js';
 import Bedroom from '../models/bedRoom.model.js';
