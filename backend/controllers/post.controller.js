@@ -3,11 +3,12 @@ import LivingRoom from '../models/livingRoom.model.js';
 import bedRoom from '../models/bedRoom.model.js';
 import PoojaRoom from '../models/poojaRoom.model.js';
 import Bedroom from '../models/bedRoom.model.js';
+import {v2 as cloudinary} from 'cloudinary';
 
 export const createModularKitchen = async(req , res )=>{
    try {
     const {text} = req.body; 
-    const {img} = req.body;
+    let {img} = req.body;
 
     if(!text){
         return res.status(400).json({error:"Please fill all the fields"})
@@ -51,7 +52,7 @@ export const getModularKitchen = async(req , res )=>{
 export const createLivingRoom = async(req , res )=>{
     try {
      const {text} = req.body; 
-     const {img} = req.body;
+     let {img} = req.body;
  
      if(!text && !img){
          return res.status(400).json({error:"Please fill all the fields"})
@@ -95,7 +96,7 @@ export const getLivingRoom = async(req , res )=>{
 export const createBedRoom = async(req , res )=>{
         try {
          const {text} = req.body; 
-         const {img} = req.body;
+         let {img} = req.body;
      
          if(!text && !img){
              return res.status(400).json({error:"Please fill all the fields"})
@@ -139,7 +140,7 @@ export const getBedRoom = async(req , res )=>{
 export const createpoojaRoom = async(req , res )=>{
             try {
              const {text} = req.body; 
-             const {img} = req.body;
+             let {img} = req.body;
          
              if(!text && !img){
                  return res.status(400).json({error:"Please fill all the fields"})
