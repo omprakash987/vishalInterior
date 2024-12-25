@@ -10,6 +10,7 @@ import CreatePoojaRoomDesign from './components/backendComponents/CreatePoojaRoo
 import GetBedRoomDesign from './components/backendComponents/GetBedRoomDesign'
 import GetPoojaRoomDesign from './components/backendComponents/GetPoojaRoomDesign'
 import GetLivingRoomDesign from './components/backendComponents/GetLivingRoomDesing'
+import Service from './components/designComponents/service'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/living-room-design" element={<GetLivingRoomDesign />} />
           <Route path="/bedroom-design" element={<GetBedRoomDesign />} />
           <Route path="/pooja-room-design" element={<GetPoojaRoomDesign />} />
+          <Route path='/service' element={<Service/>}/>
           
 
           

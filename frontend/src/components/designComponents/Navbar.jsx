@@ -15,7 +15,7 @@ const Navbar = () => {
     navigate("/");
   };
 
-  const phoneNumber = "9354103871"
+  const phoneNumber = "7004427348"
   const handleWhatsapp = ()=>{
     const url = `https://wa.me/${phoneNumber}`;
     window.open(url, '_blank');
@@ -84,22 +84,14 @@ const Navbar = () => {
             </li>
             <li className="hover:text-[#008489] cursor-pointer">Recent Projects</li>
             <li className="hover:text-[#008489] cursor-pointer">Reviews</li>
-            <li className="hover:text-[#008489] cursor-pointer">Site Services</li>
+            <li className="hover:text-[#008489] cursor-pointer"> Services</li>
+            
+           
             <li className="hover:text-[#008489] cursor-pointer flex items-center">
-              DC Signature <span className="text-red-500 text-xs font-bold ml-1">New</span>
+              About us <span className="ml-1 text-xs"></span>
             </li>
-            <li className="hover:text-[#008489] cursor-pointer flex items-center">
-              Guides <span className="ml-1 text-xs">▼</span>
-            </li>
-            <li className="hover:text-[#008489] cursor-pointer flex items-center">
-              Blogs <span className="ml-1 text-xs">▼</span>
-            </li>
-            <li className="hover:text-[#008489] cursor-pointer flex items-center">
-              Cities <span className="ml-1 text-xs">▼</span>
-            </li>
-            <li className="hover:text-[#008489] cursor-pointer flex items-center">
-              More <span className="ml-1 text-xs">▼</span>
-            </li>
+           
+           
           </ul>
           <div onClick={handleWhatsapp} className="text-green-500 text-2xl cursor-pointer"><FaWhatsapp /></div>
 
