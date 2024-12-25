@@ -10,7 +10,7 @@ import CreatePoojaRoomDesign from './components/backendComponents/CreatePoojaRoo
 import GetBedRoomDesign from './components/backendComponents/GetBedRoomDesign'
 import GetPoojaRoomDesign from './components/backendComponents/GetPoojaRoomDesign'
 import GetLivingRoomDesign from './components/backendComponents/GetLivingRoomDesing'
-import Service from './components/designComponents/service'
+import Service from './components/designComponents/Service'
 
 function App() {
 
