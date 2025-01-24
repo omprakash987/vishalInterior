@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import SendEmail from "../backendComponents/SendEmail";
 import { FaWhatsapp, FaBars, FaTimes, FaPhoneAlt, FaPalette } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import { IoHomeOutline } from "react-icons/io5";
 
 
 const Navbar = () => {
@@ -20,6 +21,11 @@ const Navbar = () => {
     const url = `https://wa.me/${phoneNumber}`;
     window.open(url, "_blank");
   };
+  const handleGmail = ()=>{
+    const recipientEmail = 'kanuparewa371@gmail.com'
+    const mailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}`;
+    window.open(mailUrl, "_blank");
+  }
 
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`;
@@ -205,7 +211,7 @@ const Navbar = () => {
           onClick={() => navigate("/modular-kitchen-design")}
           className="flex flex-col items-center text-gray-600 text-sm cursor-pointer"
         >
-          <FaPalette className="text-2xl text-yellow-800" />
+          <IoHomeOutline className="text-2xl " />
           <span>Design</span>
         </div>
         <div
@@ -219,7 +225,7 @@ const Navbar = () => {
           
           className="flex flex-col items-center text-gray-600 text-sm cursor-pointer"
         >
-          <SiGmail className=" text-red-500 text-2xl" />
+          <SiGmail onClick={handleGmail} className=" text-red-500 text-2xl" />
           <span>Email</span>
         </div>
         <div
