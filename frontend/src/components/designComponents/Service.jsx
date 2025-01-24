@@ -54,7 +54,7 @@ const Service = () => {
       <div className="w-full">
         
       </div>
-      <h1 className="text-2xl font-bold text-gray-800 mb-10 uppercase tracking-wide shadow-md md:text-5xl">
+      <h1 className="text-2xl font-bold text-gray-800 mb-10 uppercase  md:text-5xl">
         Our Services
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-full">
