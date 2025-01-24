@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import SendEmail from "../backendComponents/SendEmail";
-import { FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
+import { FaWhatsapp, FaBars, FaTimes, FaPhoneAlt, FaPalette } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -19,6 +21,10 @@ const Navbar = () => {
     window.open(url, "_blank");
   };
 
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -31,6 +37,7 @@ const Navbar = () => {
     <>
       <nav className="w-full border-b-2 m-0 sticky top-0 z-50 bg-white">
         <div className="flex items-center justify-between py-4 px-6 max-w-screen-xl mx-auto">
+          {/* Logo Section */}
           <div className="flex items-center">
             <div className="w-10 h-10 bg-[#008489] flex items-center justify-center rounded-full">
               <div
@@ -51,6 +58,7 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Hamburger Icon for Mobile */}
           <div
             className="md:hidden text-2xl cursor-pointer text-gray-600"
             onClick={toggleMobileMenu}
@@ -58,6 +66,7 @@ const Navbar = () => {
             {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
           </div>
 
+          {/* Desktop Navbar */}
           <ul className="hidden md:flex items-center space-x-6 text-gray-600 text-sm whitespace-nowrap z-10">
             <li
               className="hover:text-[#008489] cursor-pointer flex items-center relative font-bold"
@@ -112,7 +121,10 @@ const Navbar = () => {
             <li className="hover:text-[#008489] cursor-pointer font-bold">
               Reviews
             </li>
-            <Link to={'/service'} className="hover:text-[#008489] cursor-pointer font-bold">
+            <Link
+              to={"/service"}
+              className="hover:text-[#008489] cursor-pointer font-bold"
+            >
               Services
             </Link>
             <li className="hover:text-[#008489] cursor-pointer flex items-center font-bold">
@@ -120,16 +132,19 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <div
-            onClick={handleWhatsapp}
-            className="text-green-500 text-2xl cursor-pointer"
-          >
-            <FaWhatsapp />
+          {/* WhatsApp and Get Quote Icons for Desktop */}
+          <div className="hidden md:flex space-x-4">
+            <div
+              onClick={handleWhatsapp}
+              className="text-green-500 text-2xl cursor-pointer"
+            >
+              <FaWhatsapp />
+            </div>
+            <SendEmail quote={"Get Quote"} />
           </div>
-
-          <SendEmail quote={"Get Quote"} />
         </div>
 
+        {/* Mobile Sidebar */}
         <div
           className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-40 transform transition-transform duration-300 ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
@@ -180,15 +195,41 @@ const Navbar = () => {
             <li className="hover:text-[#008489] cursor-pointer font-bold">
               <Link to="/about-us">About us</Link>
             </li>
-            <li
-              onClick={handleWhatsapp}
-              className="text-green-500 cursor-pointer flex items-center space-x-2 font-bold"
-            >
-              <FaWhatsapp /> <span>WhatsApp</span>
-            </li>
           </ul>
         </div>
       </nav>
+
+      {/* Mobile Bottom Navbar */}
+      <div className="fixed bottom-0 left-0 w-full bg-white shadow-lg flex justify-around py-2 z-50 md:hidden">
+        <div
+          onClick={() => navigate("/modular-kitchen-design")}
+          className="flex flex-col items-center text-gray-600 text-sm cursor-pointer"
+        >
+          <FaPalette className="text-2xl text-yellow-800" />
+          <span>Design</span>
+        </div>
+        <div
+          onClick={handleCall}
+          className="flex flex-col items-center text-gray-600 text-sm cursor-pointer"
+        >
+          <FaPhoneAlt className=" text-blue-500 text-2xl" />
+          <span>Call Now</span>
+        </div>
+        <div
+          
+          className="flex flex-col items-center text-gray-600 text-sm cursor-pointer"
+        >
+          <SiGmail className=" text-red-500 text-2xl" />
+          <span>Email</span>
+        </div>
+        <div
+          onClick={handleWhatsapp}
+          className="flex flex-col items-center text-green-500 text-sm cursor-pointer"
+        >
+          <FaWhatsapp className="text-2xl" />
+          <span>WhatsApp</span>
+        </div>
+      </div>
     </>
   );
 };
