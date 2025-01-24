@@ -5,17 +5,10 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-12 px-8 md:px-20 lg:px-32">
       <div className="container mx-auto">
-        {/* Header Section */}
         <div className="text-center mb-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready To Design Your Dream Home?</h2>
-          <button className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded">
-            <SendEmail/>
-          </button>
         </div>
-
-        {/* Navigation Links - Grid Layout */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
-          {/* Example Links - Replace with your actual links */}
           {[
             "Home", "Design Gallery", "Space Saving Designs", "How It Works",
             "Modular Kitchen Designs", "Wardrobe Designs", "Why Vishal Interior", "Recent Projects",
@@ -32,7 +25,6 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Experience Centers */}
         <div className="mb-12">
           <h3 className="text-lg font-semibold mb-4">Our Experience Centres</h3>
           <p className="text-sm">
@@ -49,11 +41,9 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Footer Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center text-xs">
           <p>&copy; 2024 GSE-Commerce Pvt ltd. Privacy Policy | Terms of Use</p>
           <div className="flex space-x-4">
-            {/* Social Icons - Replace with your actual icons/links */}
             <a href="#" className="hover:text-gray-300">Fb</a>
             <a href="#" className="hover:text-gray-300">In</a>
             <a href="#" className="hover:text-gray-300">Tw</a>

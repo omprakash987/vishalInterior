@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 // Import images for each step
 
@@ -79,9 +80,9 @@ const StepsSection = () => {
         >
           Learn More &gt;
         </a>
-        <button className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-6 rounded-lg">
-          Get Started Now
-        </button>
+       <Link to={'/modular-kitchen-design'} className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-6 rounded-lg">
+       Get Started
+       </Link>
       </div>
     </section>
   );

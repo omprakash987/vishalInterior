@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-const SendEmail = () => {
+const SendEmail = ({quote}) => {
 
    const [isDialogOpen, setIsDialogOpen] = useState(false);
    const [formData, setFormData] = useState({
@@ -58,7 +58,7 @@ const SendEmail = () => {
        setFormSuccess("Email sent successfully!");
        setTimeout(() => {
          handleDialogToggle();
-       }, 2000); // Auto close dialog after success
+       }, 2000); 
      } catch (error) {
        setFormError("An error occurred while sending the email.");
        console.error("Error sending email:", error);
@@ -68,11 +68,11 @@ const SendEmail = () => {
   return (
 
     <div>
-        <div className="flex items-center space-x-4 rounded-xl p-2 bg-green-500">
+        <div className="flex items-center space-x-4 rounded-lg p-2 bg-green-500">
            
            
            <button onClick={handleDialogToggle}>
-            Get Quote
+            {quote}
            </button>
           </div>
 
