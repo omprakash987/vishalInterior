@@ -121,21 +121,27 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="hover:text-[#008489] cursor-pointer font-bold">
+            <Link
+            to={'recent-projects'}
+             className="hover:text-[#008489] cursor-pointer font-bold">
               Recent Projects
-            </li>
-            <li className="hover:text-[#008489] cursor-pointer font-bold">
+            </Link>
+            <Link
+            to={'/reviews'}
+             className="hover:text-[#008489] cursor-pointer font-bold">
               Reviews
-            </li>
+            </Link>
             <Link
               to={"/service"}
               className="hover:text-[#008489] cursor-pointer font-bold"
             >
               Services
             </Link>
-            <li className="hover:text-[#008489] cursor-pointer flex items-center font-bold">
+            <Link
+            to={'/about-us'}
+             className="hover:text-[#008489] cursor-pointer flex items-center font-bold">
               About us
-            </li>
+            </Link>
           </ul>
 
           {/* WhatsApp and Get Quote Icons for Desktop */}

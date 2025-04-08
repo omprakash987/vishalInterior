@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const PopularDesigns = () => {
   const designs = [
-    { id: 1, src: "/vishalinterior/bedroom/1.jpg", alt: "Design 1" },
-    { id: 2, src: "/vishalinterior/bedroom/1.jpg", alt: "Design 2" },
-    { id: 3, src: "/vishalinterior/bedroom/1.jpg", alt: "Design 3" },
+    { id: 1, src: "/vishalinterior/bedroom/5.jpg", alt: "Design 1" },
+    { id: 2, src: "/vishalinterior/livingroom/10.jpg", alt: "Design 2" },
+    { id: 3, src: "/vishalinterior/modularkitchen/kitchendesign/photo2.jpg", alt: "Design 3" },
     { id: 4, src: "/vishalinterior/bedroom/1.jpg", alt: "Design 4" },
   ];
 

@@ -36,9 +36,9 @@ const StepsSection = () => {
         {/* Step 2 */}
         <div className="text-center">
           <img
-            src="/vishalinterior/bedroom/1.jpg"
+            src="/vishalinterior/designerPerson.png"
             alt="Meet our designers"
-            className="w-full h-auto rounded-lg shadow-lg"
+            className="w-full h-45 rounded-lg shadow-lg h-[172px]"
           />
           <h3 className="text-xl font-semibold text-gray-700 mt-4">
             <span className="text-2xl font-bold text-teal-600">02</span> Meet our
@@ -49,9 +49,9 @@ const StepsSection = () => {
         {/* Step 3 */}
         <div className="text-center">
           <img
-            src="/vishalinterior/bedroom/1.jpg"
+            src="/OIP.jpg"
             alt="Personalise your designs"
-            className="w-full h-auto rounded-lg shadow-lg"
+            className="w-full rounded-lg shadow-lg h-[172px]"
           />
           <h3 className="text-xl font-semibold text-gray-700 mt-4">
             <span className="text-2xl font-bold text-teal-600">03</span>{" "}
@@ -62,9 +62,9 @@ const StepsSection = () => {
         {/* Step 4 */}
         <div className="text-center">
           <img
-            src="/vishalinterior/bedroom/1.jpg"
+            src="/book-appointment.jpg "
             alt="Move in"
-            className="w-full h-auto rounded-lg shadow-lg"
+            className="w-full rounded-lg shadow-lg h-[172px]"
           />
           <h3 className="text-xl font-semibold text-gray-700 mt-4">
             <span className="text-2xl font-bold text-teal-600">04</span> Move in

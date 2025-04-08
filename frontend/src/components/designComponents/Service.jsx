@@ -5,12 +5,12 @@ const services = [
   {
     title: 'Wooden Flooring',
     description: 'Beautiful wooden flooring that enhances the aesthetic of any space.',
-    image: '/services/OIP.jpeg'
+    image: '/woodwall.jpg'
   },
   {
     title: 'Wood Wall Panel',
     description: 'Elegant wood wall panels that bring nature indoors.',
-    image: '/services/OIP.jpeg' 
+    image: '/wallpanel1.jpg' 
   },
   {
     title: 'Hard Wood Flooring',
@@ -20,28 +20,9 @@ const services = [
   {
     title: 'Dec Wood',
     description: 'Premium dec wood materials designed for modern interiors.',
-    image: '/services/OIP.jpeg',  
+    image: '/wallpanel.jpg',  
   },
-  {
-    title: 'Wooden Flooring',
-    description: 'Beautiful wooden flooring that enhances the aesthetic of any space.',
-    image: '/services/OIP.jpeg' 
-  },
-  {
-    title: 'Wood Wall Panel',
-    description: 'Elegant wood wall panels that bring nature indoors.',
-    image: '/services/OIP.jpeg'  
-  },
-  {
-    title: 'Hard Wood Flooring',
-    description: 'Durable and luxurious hardwood flooring for high-traffic areas.',
-    image: '/services/OIP.jpeg',  
-  },
-  {
-    title: 'Dec Wood',
-    description: 'Premium dec wood materials designed for modern interiors.',
-    image: '/services/OIP.jpeg', 
-  },
+  
 ];
 
 const Service = () => {
