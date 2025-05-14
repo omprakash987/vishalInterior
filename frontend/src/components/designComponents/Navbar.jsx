@@ -81,7 +81,7 @@ const Navbar = () => {
             >
               Design Gallery <span className="ml-1 text-xs">▼</span>
               <ul
-                className={`absolute top-full left-0 mt-2 w-72 cursor-pointer bg-white shadow-lg rounded-md transition-all duration-700 ease-in-out transform ${
+                className={`absolute top-full left-0 mt-2 w-[36rem] grid grid-cols-2 gap-2 cursor-pointer bg-white bg-opacity-80 backdrop-filter backdrop-blur-md shadow-lg rounded-md transition-all duration-700 ease-in-out transform ${
                   isDropdownOpen
                     ? "opacity-100 translate-y-0 scale-100"
                     : "opacity-0 -translate-y-3 scale-95 pointer-events-none"
@@ -119,10 +119,86 @@ const Navbar = () => {
                     Pooja Room
                   </Link>
                 </li>
+                <li className="px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                  <Link
+                    to="/wordrobe-room-design"
+                    className="text-gray-800 font-bold text-2xl"
+                  >
+                   wardrobe
+                  </Link>
+                </li>
+                <li className="px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                  <Link
+                    to="/kids-room-design"
+                    className="text-gray-800 font-bold text-2xl"
+                  >
+                    kids Bedroom
+                  </Link>
+                </li>
+                <li className="px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                  <Link
+                    to="/dining-room-design"
+                    className="text-gray-800 font-bold text-2xl"
+                  >
+                    Dining room
+                  </Link>
+                </li>
+                <li className="px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                  <Link
+                    to="/homeoffice-room-design"
+                    className="text-gray-800 font-bold text-2xl"
+                  >
+                    Home Office
+                  </Link>
+                </li>
+
+                <li className="px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                  <Link
+                    to="/Bathroom-design"
+                    className="text-gray-800 font-bold text-2xl"
+                  >
+                   BathRoom
+                  </Link>
+                </li>
+
+                <li className="px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                  <Link
+                    to="/Balcony-design"
+                    className="text-gray-800 font-bold text-2xl"
+                  >
+                    Balcony
+                  </Link>
+                </li>
+                <li className="px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                  <Link
+                    to="/1BHK-room-design"
+                    className="text-gray-800 font-bold text-2xl"
+                  >
+                    1BHK
+                  </Link>
+                </li>
+
+                <li className="px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                  <Link
+                    to="/2BHK-room-design"
+                    className="text-gray-800 font-bold text-2xl"
+                  >
+                   2BHK
+                  </Link>
+                </li>
+
+                <li className="px-4 py-3 hover:bg-gray-100 cursor-pointer">
+                  <Link
+                    to="/3BHK-room-design"
+                    className="text-gray-800 font-bold text-2xl"
+                  >
+                    3BHK
+                  </Link>
+                </li>
               </ul>
             </li>
             <Link
-            to={'recent-projects'}
+            to={'/recent-projects'}
              className="hover:text-[#008489] cursor-pointer font-bold">
               Recent Projects
             </Link>

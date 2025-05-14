@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
+import Navbar from "./Navbar";
 
 const reviews = [
   {
@@ -77,6 +78,9 @@ const ReviewCard = ({ name, text, stars }) => (
 
 const Reviews = () => {
   return (
+    <div>
+
+    <Navbar className =" h-0"/>
     <div className="bg-gray-50 min-h-screen px-6 py-12 md:px-16">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -92,6 +96,7 @@ const Reviews = () => {
           <ReviewCard key={idx} {...review} />
         ))}
       </div>
+    </div>
     </div>
   );
 };

@@ -26,9 +26,7 @@ const HeroSection = () => {
            <div className="flex items-center justify-between py-4 px-6 max-w-screen-xl mx-auto">
            <SendEmail quote={'Book Free Consultence'}/>
            </div>
-            <p className="text-xs text-gray-400 mt-2">
-              *T&C: Available on orders over Rs. 5 Lakh
-            </p>
+            
           </div>
         </div>
       </div>

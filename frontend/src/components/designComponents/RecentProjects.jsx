@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Navbar from "./Navbar";
 
 const projects = [
   {
@@ -60,7 +61,11 @@ const ProjectCard = ({ title, description, location, image }) => (
 
 const RecentProjects = () => {
   return (
-    <div className="bg-gray-50 min-h-screen px-6 py-12 md:px-16">
+    <div>
+<Navbar className = " h-0"/>
+    
+    <div className="bg-gray-50 h-0  px-6 py-12 md:px-16">
+     
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -75,6 +80,7 @@ const RecentProjects = () => {
           <ProjectCard key={idx} {...project} />
         ))}
       </div>
+    </div>
     </div>
   );
 };

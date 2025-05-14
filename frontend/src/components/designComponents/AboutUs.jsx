@@ -1,8 +1,12 @@
 import React from "react";
 import { FaPalette, FaRegSmileBeam, FaHome } from "react-icons/fa";
+import Navbar from "./Navbar";
 
 const AboutUs = () => {
   return (
+    <div>
+
+    <Navbar className ="h-0" />
     <div className="bg-white text-gray-800 min-h-screen py-12 px-6 md:px-16">
       {/* Hero Section */}
       <section className="text-center mb-16">
@@ -15,13 +19,7 @@ const AboutUs = () => {
       </section>
 
       {/* Image Section */}
-      <div className="flex justify-center mb-16">
-        <img
-          src="/developer.jpg"
-          alt="Interior Design Team"
-          className="rounded-2xl shadow-lg w-full max-w-4xl object-cover h-96"
-        />
-      </div>
+     
 
       {/* Why Choose Us Section */}
       <section className="mb-16">
@@ -65,6 +63,7 @@ const AboutUs = () => {
           Contact Our Team
         </button>
       </section>
+    </div>
     </div>
   );
 };
