@@ -55,10 +55,13 @@ const Navbar = () => {
             </div>
             <div className="ml-2">
               <h1 className="text-lg font-semibold">
-                <span className="text-[#008489]">VISHAL</span>
-                <span className="text-[#C0A080]">INTERIOR</span>
+                <span className="text-[#008489] m-12">VISHAL</span>
+                <br />
+                <span className="text-[#C0A080] m-1">INTERIOR</span>
+                <span className="text-[#C0A080]">&</span>
+                <span className="text-[#C0A080] m-1">EXTERIOR</span>
               </h1>
-              <p className="text-xs text-gray-500 leading-tight">
+              <p className="text-xs text-gray-500 leading-tight m-3">
                 MORE ROOM FOR JOY
               </p>
             </div>
